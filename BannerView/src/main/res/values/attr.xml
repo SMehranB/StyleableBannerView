@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BannerView">
+
+        <attr name="android:textColor" format="color"/>
+        <attr name="android:text" format="string"/>
+        <attr name="bv_highlightColor" format="color"/>
+        <attr name="bv_highlightText" format="string"/>
+        <attr name="android:animationDuration" format="integer"/>
+        <attr name="android:textSize" format="dimension"/>
+        <attr name="bv_gradientStart" format="color"/>
+        <attr name="bv_gradientEnd" format="color"/>
+        <attr name="bv_enableGlow" format="boolean"/>
+
+    </declare-styleable>
+
+</resources>

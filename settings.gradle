@@ -1,0 +1,3 @@
+include ':BannerView'
+include ':app'
+rootProject.name = "BannerViewSample"
