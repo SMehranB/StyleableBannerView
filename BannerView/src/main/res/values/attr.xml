@@ -3,15 +3,35 @@
 
     <declare-styleable name="BannerView">
 
-        <attr name="android:textColor" format="color"/>
         <attr name="android:text" format="string"/>
-        <attr name="bv_highlightColor" format="color"/>
-        <attr name="bv_highlightText" format="string"/>
+        <attr name="android:textStyle">
+            <flag name="Normal" value="0"/>
+            <flag name="Bold" value="1"/>
+            <flag name="Italic" value="2"/>
+        </attr>
+        <attr name="android:shadowColor" format="color"/>
+        <attr name="android:shadowDx" format="float"/>
+        <attr name="android:shadowDy" format="float"/>
+        <attr name="android:shadowRadius" format="float"/>
+        <attr name="android:textColor" format="color"/>
         <attr name="android:animationDuration" format="integer"/>
         <attr name="android:textSize" format="dimension"/>
+        <attr name="bv_enableTextShadow" format="boolean"/>
+
+        <attr name="bv_highlightStyle">
+            <flag name="normal" value="0"/>
+            <flag name="bold" value="1"/>
+            <flag name="italic" value="2"/>
+        </attr>
+        <attr name="bv_highlightUnderlined" format="boolean"/>
+        <attr name="bv_highlightFont" format="reference"/>
+        <attr name="bv_TextFont" format="reference"/>
+        <attr name="bv_highlightColor" format="color"/>
+        <attr name="bv_highlightSize" format="dimension"/>
+        <attr name="bv_highlightText" format="string"/>
         <attr name="bv_gradientStart" format="color"/>
         <attr name="bv_gradientEnd" format="color"/>
-        <attr name="bv_enableGlow" format="boolean"/>
+        <attr name="bv_enableHighlightShadow" format="boolean"/>
 
     </declare-styleable>
 
