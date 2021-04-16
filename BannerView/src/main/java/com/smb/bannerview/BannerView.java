@@ -229,21 +229,31 @@ public class BannerView extends View {
     }
 
     private int getEndPosition() {
-        String[] messageParts = message.split(highlightText);
 
         int result = 0;
+        if (highlightText != null) {
 
-        for (int i = 0; i < messageParts.length - 1; i++) {
-            result += textPaint.measureText(messageParts[i]);
-            result += highlightPaint.measureText(highlightText);
+            String[] messageParts = message.split(highlightText);
+
+
+            for (int i = 0; i < messageParts.length - 1; i++) {
+                result += textPaint.measureText(messageParts[i]);
+                //MEASURING THE TEXT PLUS AN EMPTY SPACE FOR THE TEXT TO FULLY EXIT THE SCREEN WHEN THE HIGHLIGHT TEXT IS LARGER IN SIZE
+                result += highlightPaint.measureText(highlightText + " ");
+            }
+
+            result += textPaint.measureText(messageParts[messageParts.length - 1]);
+        }else{
+            result = (int) textPaint.measureText(message);
         }
-
-        result += textPaint.measureText(messageParts[messageParts.length - 1]);
 
         return result * -1;
     }
 
     public void start() {
+
+        setTextPaintAttr();
+        setHighlightPaintAttr();
 
         int startPos = getResources().getDisplayMetrics().widthPixels;
         int endPos = getEndPosition();
@@ -279,6 +289,9 @@ public class BannerView extends View {
         textAnimation.play(va);
         textAnimation.start();
     }
+
+
+
 
     public long getAnimationDuration() {
         return animationDuration;

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BannerViewSample</string>
+    <string name="message">This is a BannerView which can be styled in many ways...</string>
 </resources>

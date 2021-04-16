@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         banner4.start()
         banner5.start()
         banner6.start()
+        banner7.start()
 
         val bv = BannerView(this)
 
