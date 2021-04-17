@@ -1,7 +1,7 @@
 # StyleableBannerView
 A styleable Banner View with the possibility of designating a highlighted String value 
 
-## Features!
+## Features! [![](https://jitpack.io/v/SMehranB/StyleableBannerView.svg)](https://jitpack.io/#SMehranB/StyleableBannerView)
 
  •	 Text Color, Text Size, Text Font, Text Style
  
