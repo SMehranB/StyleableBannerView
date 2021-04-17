@@ -344,7 +344,7 @@ public class BannerView extends View {
         return highlightSize;
     }
 
-    public void setHighlightSize(int size) {
+    public void setHighlightSizeDp(int size) {
         this.highlightSize = dpToPixel(size);
         highlightPaint.setTextSize(highlightSize);
         requestLayout();
@@ -402,7 +402,7 @@ public class BannerView extends View {
         return textSize / getResources().getDisplayMetrics().density;
     }
 
-    public void setTextSizeDP(int size) {
+    public void setTextSizeDp(int size) {
         this.textSize = dpToPixel(size);
         textPaint.setTextSize(dpToPixel(size));
         requestLayout();
