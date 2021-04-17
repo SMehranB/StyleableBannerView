@@ -29,14 +29,22 @@ allprojects {
 ```
 ```
 dependencies {
-	 implementation 'com.github.SMehranB:BannerView:1.0.0'
+	 implementation 'com.github.SMehranB:StyleableBannerView:1.0.0'
 }
 ```
 ## Maven
 ```
+<repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+</repositories>
+```
+```
 <dependency>
 	<groupId>com.github.SMehranB</groupId>
-	<artifactId>BannerView</artifactId>
+	<artifactId>StyleableBannerView</artifactId>
 	<version>1.0.0</version>
 </dependency>
  ```
