@@ -53,7 +53,8 @@ public class BannerView extends View {
     float highlightSize = 0f;
     boolean highlightShadowEnabled = false;
 
-    private final TextPaint textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG | TextPaint.LINEAR_TEXT_FLAG);
+    private final TextPaint textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG | TextPaint.LINEAR_TEXT_FLAG
+            | TextPaint.EMBEDDED_BITMAP_TEXT_FLAG | TextPaint.SUBPIXEL_TEXT_FLAG);
     String message = "";
     @ColorInt
     int textColor = 0;
