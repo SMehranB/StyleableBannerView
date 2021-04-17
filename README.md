@@ -19,21 +19,21 @@ A styleable Banner View with the possibility of designating a highlighted String
  
 # Install
 ## Gradle
-```
+```groovy
 allprojects {
 	repositories {
-		...
+		
 		maven { url 'https://jitpack.io' }
 	}
 }
 ```
-```
+```groovy
 dependencies {
 	 implementation 'com.github.SMehranB:StyleableBannerView:1.0.0'
 }
 ```
 ## Maven
-```
+```xml
 <repositories>
 	<repository>
 	    <id>jitpack.io</id>
@@ -41,7 +41,7 @@ dependencies {
 	</repository>
 </repositories>
 ```
-```
+```xml
 <dependency>
 	<groupId>com.github.SMehranB</groupId>
 	<artifactId>StyleableBannerView</artifactId>
@@ -76,31 +76,30 @@ dependencies {
     app:layout_constraintTop_toTopOf="parent" />
  ```
 
-## Kotlin
-```kotlin
-val bv = BannerView(this)
+## 
 
-bv.apply {
-    message = "This is a BannerView with different styleable BannerView properties."
-    setTextSizeDP(16)
-    setGradientColors(Color.GREEN, Color.RED)
-    textStyle = Typeface.NORMAL
-    textFont = R.font.dancing_script
-    textColor = Color.WHITE
-    setShadowParams(Color.LTGRAY, 10f, 10f, 5f)
-    animationDuration = 15000
-    highlightFont = R.font.dancing_script
-    highlightStyle = Typeface.BOLD
-    setHighlightText("BannerView", false)
-    highlightColor = Color.MAGENTA
-    setHighlightSize(18)
-    isHighlightShadowEnabled = true
-    isTextShadowEnabled = false
-}
+```java
+BannerView bv = new BannerView(this);
 
-viewHolder.addView(bv)
+bv.setMessage(getString(R.string.message));
+bv.setTextSizeDp(24);
+bv.setGradientColors(Color.GREEN, Color.RED);
+bv.setTextStyle(Typeface.NORMAL);
+bv.setTextFont(R.font.zendots_regular);
+bv.setTextColor(Color.WHITE);
+bv.setShadowParams(Color.LTGRAY, 10f, 10f, 5f);
+bv.setAnimationDuration(15000);
+bv.setHighlightText("BannerView", false);
+bv.setHighlightColor(Color.MAGENTA);
+bv.setHighlightFont(R.font.karantina_bold);
+bv.setHighlightStyle(Typeface.BOLD);
+bv.setHighlightSizeDp(30);
+bv.setHighlightShadowEnabled(true);
+bv.setTextShadowEnabled(false);
 
-bv.start() // DO NOT FORGET THIS LINE
+viewHolder.addView(bv);
+
+bv.start(); // DO NOT FORGET THIS LINE
 ```
 
 ## 📄 License
