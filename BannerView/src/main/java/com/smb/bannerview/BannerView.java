@@ -127,6 +127,7 @@ public class BannerView extends View {
 
         attr.recycle();
 
+        setLayerType(LAYER_TYPE_SOFTWARE, null);
     }
 
     private void drawSpannedText(Canvas canvas) {
